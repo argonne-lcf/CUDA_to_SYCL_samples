@@ -1,0 +1,193 @@
+---
+MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/MainSrcFiles_placehold'
+Replacements:
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          196
+    Length:          26
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1254
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1877
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1895
+    Length:          32
+    ReplacementText: 'DPCT_CHECK_ERROR(num_devices = dpct::device_count())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1929
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1000:1: Error handling if-stmt was detected but could not be rewritten.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1944
+    Length:          11
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          1959
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1001:0: The statement could not be removed.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          2241
+    Length:          14
+    ReplacementText: 'dpct::device_info'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          2270
+    Length:          33
+    ReplacementText: 'dpct::get_device(i).get_device_info(prop)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          2495
+    Length:          0
+    ReplacementText: "        /*\n        DPCT1051:2: SYCL does not support a device property functionally compatible with pciBusID. It was migrated to -1. You may need to adjust the value of -1 for the specific device.\n        */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          2552
+    Length:          13
+    ReplacementText: '-1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Offset:          3226
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/hello_cuda_affinity.c'
+    Digest:          515f3b0ce7a39187ecdc7aaffe77e7d8
+DpctVersion:     2025.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/abagusetty/CUDA_to_SYCL_samples'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...
