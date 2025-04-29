@@ -1,4 +1,4 @@
-l# Transitioning from CUDA to SYCL
+# Transitioning from CUDA to SYCL
 
 Join us on April 29, 2025, for a webinar covering the process of porting CUDA code to SYCL, with a focus on high-performance math libraries like cuBLAS and cuFFT. ALCF's Thomas Applencourt and Abhishek Bagusetty will discuss key challenges, such as differences in API, memory management, and execution models, and provide strategies for achieving portability and performance. 
 
@@ -34,31 +34,30 @@ module load cmake
 module load headers/cuda/12.0.0
 ```
 
-## 3. Cloning Required Projects
+## 3. Build Instructions
 
-Clone the following repositories needed for your work:
+Typical build workflow, manually working with each file:
 
 ```bash
-git clone https://github.com/your-org/your-main-project.git
-git clone https://github.com/your-org/your-helper-library.git
+cd CUDA_to_SYCL_samples
+dpct --extra-arg="-I /opt/aurora/24.347.0/oneapi/compiler/2025.0/opt/compiler/include" --cuda-include-path=$SITE_CUDA_HEADERS_DIR/include hello_cuda_affinity.c --out-root=dpct_output
+
+cd dpct_output
+mpicxx -fsycl -qopenmp hello_cuda_affinity.c.dp.cpp -o hello_cuda_affinity_v1.out
 ```
 
-Replace the URLs above with the actual project repository links you have been provided. If you require access, ensure your GitHub account is added to the relevant organization or team.
+Make sure to adjust compiler options if you need to use MPI and/or SYCL backends.
 
 ---
 
-## 4. Build Instructions
-
-Typical build workflow:
+## 4. Running examples on Aurora
 
 ```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_CXX_COMPILER=icpx -DCMAKE_C_COMPILER=icx
-make -j
-```
+$ export OMP_NUM_THREADS=1
+$ export CPU_BIND_SCHEME="--cpu-bind=list:1-8:9-16:17-24:25-32:33-40:41-48:53-60:61-68:69-76:77-84:85-92:93-100"
+$ mpiexec -n 12 -ppn 12 ${CPU_BIND_SCHEME} gpu_tile_compact.sh ./hello_cuda_affinity_v1.out | sort
 
-Make sure to adjust compiler options if you need to use MPI or SYCL backends.
+```
 
 ---
 
@@ -82,93 +81,5 @@ Feel free to reach out if you encounter issues with access, setup, builds, or pe
 
 - [ALCF Aurora User Guide](https://docs.alcf.anl.gov/aurora/)
 - [Intel oneAPI Documentation](https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html)
-- [Cray Programming Environment](https://docs.hpe.com/)
 
 ---
-
-
-
-#Transitioning from CUDA to SYCL
-Source on Aurora hardware: https://docs.alcf.anl.gov/aurora/#aurora-machine-overview
-
-## Contributing to documentation
-
-### Setting up Environment
-
-Setup necessary modules such that 
-```bash
-module use /soft/modulefiles
-module load cmake
-module load headers/cuda/12.0.0
-```
-
-### Samples to Clone
-
-Clone the following projects 
-To build documentation locally, you need a Python environment with `mkdocs` installed.  Check that Python 3.6+ is installed:
-
-Using Git's SSH protocol. Make sure you add your SSH public key to your GitHub account:
-```bash
-git clone git@github.com:argonne-lcf/user-guides.git
-cd user-guides
-git submodule init; git submodule update
-```
-
-### Installing MkDocs
-
-To install `mkdocs` in the current environment: 
-```bash
-cd user-guides
-make install-dev
-```
-
-### Preview the docs locally and test for errors
-
-Run `mkdocs serve` or `make serve` to auto-build and serve the docs for preview in your web browser:
-```bash
-make serve
-```
-
-GitHub Actions are used to automatically validate all changes in pull requests before they are merged, by executing `mkdocs build --strict`. The [`--strict`](https://www.mkdocs.org/user-guide/configuration/#validation) flag will print out warnings and return a nonzero code if any of a number of checks fail (e.g. broken relative links, orphaned Markdown pages that are missing from the navigation sidebar, etc.). To see if your changes will pass these tests, run the following command locally:
-```
-make build-docs
-```
-
-### Working on documentation
-
-* All commits must have a commit message
-* Create your own branch from the `main` branch.  Here, we are using `YOURBRANCH` as an example:
-```bash
-cd user-guides
-git fetch --all
-git checkout main
-git pull origin main
-git checkout -b YOURBRANCH
-git push -u origin YOURBRANCH
-```
-* Commit your changes to the remote repo:
-```bash
-cd user-guides
-git status                         # check the status of the files you have edited
-git commit -a -m "Updated docs"    # preferably one issue per commit
-git status                         # should say working tree clean
-git push origin YOURBRANCH         # push YOURBRANCH to origin
-git checkout main                  # move to the local main
-git pull origin main               # pull the remote main to your local machine
-git checkout YOURBRANCH            # move back to your local branch
-git merge main                     # merge the local develop into **YOURBRANCH** and
-                                     # make sure NO merge conflicts exist
-git push origin YOURBRANCH         # push the changes from local branch up to your remote branch
-```
-* Create merge request from https://github.com/argonne-lcf/user-guides from `YOURBRANCH` to `main` branch.
-
-## Inbound Links Validation
-External URLs pointing to our docs are tracked in [includes/validate-inbound-URLs.txt](includes/validate-inbound-URLs.txt) and validated during build to prevent broken links from the main ALCF site, etc. Add URLs to that file to ensure that the matching `.md` in this repository is never moved, renamed, or deleted.
-
-There are two Python `scripts/` that perform this function:
-1. (works with `mkdocs build` and `serve`): Translate URLs to relative path links to their matching source `.md` files; write these links to `docs/inbound-links.md`. Use MkDocs' built-in validation (adding `--strict` flag when running `mkdocs build`, in order to return an error code if they are invalid).
-2. (works with `mkdocs build`, only): Use a lightweight post-build validation on generated `site/` directory HTML contents.
-
-## Contact Us
-Abhishek Bagusetty, abausetty@anl.gov
-Thomas Applencourt, tapplencourt@anl.gov

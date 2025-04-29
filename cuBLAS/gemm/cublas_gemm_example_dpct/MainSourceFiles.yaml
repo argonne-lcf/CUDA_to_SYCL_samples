@@ -1,0 +1,499 @@
+---
+MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/MainSrcFiles_placehold'
+Replacements:
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2500
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2554
+    Length:          0
+    ReplacementText: "\n#include <dpct/blas_utils.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2556
+    Length:          23
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2579
+    Length:          26
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2693
+    Length:          0
+    ReplacementText: ' try '
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2694
+    Length:          0
+    ReplacementText: "\n    dpct::device_ext &dev_ct1 = dpct::get_current_device();\n    sycl::queue &q_ct1 = dev_ct1.in_order_queue();"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2699
+    Length:          14
+    ReplacementText: 'dpct::blas::descriptor_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2734
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          2756
+    Length:          4
+    ReplacementText: '&q_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3342
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3369
+    Length:          11
+    ReplacementText: 'oneapi::mkl::transpose::nontrans'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3386
+    Length:          17
+    ReplacementText: 'oneapi::mkl::transpose'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3413
+    Length:          11
+    ReplacementText: 'oneapi::mkl::transpose::nontrans'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3662
+    Length:          22
+    ReplacementText: 'DPCT_CHECK_ERROR(cublasH = new dpct::blas::descriptor())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3688
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1025:2: The SYCL queue is created ignoring the flag and priority options.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3703
+    Length:          57
+    ReplacementText: 'DPCT_CHECK_ERROR(stream = dev_ct1.create_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3780
+    Length:          32
+    ReplacementText: 'DPCT_CHECK_ERROR(cublasH->set_queue(stream))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3869
+    Length:          73
+    ReplacementText: 'DPCT_CHECK_ERROR(d_A = (data_type *)sycl::malloc_device(sizeof(data_type) * A.size(), q_ct1))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          3960
+    Length:          73
+    ReplacementText: 'DPCT_CHECK_ERROR(d_B = (data_type *)sycl::malloc_device(sizeof(data_type) * B.size(), q_ct1))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4051
+    Length:          73
+    ReplacementText: 'DPCT_CHECK_ERROR(d_C = (data_type *)sycl::malloc_device(sizeof(data_type) * C.size(), q_ct1))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4132
+    Length:          0
+    ReplacementText: "/*\n    DPCT1124:3: cudaMemcpyAsync is migrated to asynchronous memcpy API. While the origin API might be synchronous, it depends on the type of operand memory, so you may need to call wait() on event return by memcpy API to ensure synchronization behavior.\n    */\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4143
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4202
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4226
+    Length:          39
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4266
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4273
+    Length:          0
+    ReplacementText: "/*\n    DPCT1124:4: cudaMemcpyAsync is migrated to asynchronous memcpy API. While the origin API might be synchronous, it depends on the type of operand memory, so you may need to call wait() on event return by memcpy API to ensure synchronization behavior.\n    */\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4284
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4343
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4367
+    Length:          39
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4407
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4463
+    Length:          90
+    ReplacementText: 'DPCT_CHECK_ERROR(oneapi::mkl::blas::column_major::gemm(cublasH->get_queue(), transa, transb, m, n, k, alpha, d_A, lda, d_B, ldb, beta, d_C, ldc))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4597
+    Length:          0
+    ReplacementText: "/*\n    DPCT1124:5: cudaMemcpyAsync is migrated to asynchronous memcpy API. While the origin API might be synchronous, it depends on the type of operand memory, so you may need to call wait() on event return by memcpy API to ensure synchronization behavior.\n    */\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4608
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4667
+    Length:          24
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4691
+    Length:          39
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4731
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4750
+    Length:          29
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4979
+    Length:          13
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::dpct_free(d_A, q_ct1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          4992
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5010
+    Length:          13
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::dpct_free(d_B, q_ct1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5023
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5041
+    Length:          13
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::dpct_free(d_C, q_ct1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5054
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5075
+    Length:          22
+    ReplacementText: 'DPCT_CHECK_ERROR(delete (cublasH))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5116
+    Length:          25
+    ReplacementText: 'DPCT_CHECK_ERROR(dev_ct1.destroy_queue(stream))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5160
+    Length:          17
+    ReplacementText: 'DPCT_CHECK_ERROR(dev_ct1.reset())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Offset:          5207
+    Length:          0
+    ReplacementText: "\ncatch (sycl::exception const &exc) {\n  std::cerr << exc.what() << \"Exception caught at file:\" << __FILE__ << \", line:\" << __LINE__ << std::endl;\n  std::exit(1);\n}"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm/cublas_gemm_example.cu'
+    Digest:          0bf9bd901028916e1115e2df93001928
+DpctVersion:     2025.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/abagusetty/CUDA_to_SYCL_samples/cuBLAS/gemm'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...
