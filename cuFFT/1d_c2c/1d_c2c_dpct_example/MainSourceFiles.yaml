@@ -1,0 +1,382 @@
+---
+MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/MainSrcFiles_placehold'
+Replacements:
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2500
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2556
+    Length:          0
+    ReplacementText: "\n#include <dpct/fft_utils.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2557
+    Length:          19
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2636
+    Length:          0
+    ReplacementText: "\n    dpct::device_ext &dev_ct1 = dpct::get_current_device();\n    sycl::queue &q_ct1 = dev_ct1.in_order_queue();"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2641
+    Length:          11
+    ReplacementText: 'dpct::fft::fft_engine_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2663
+    Length:          12
+    ReplacementText: 'dpct::queue_ptr'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          2685
+    Length:          4
+    ReplacementText: '&q_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3164
+    Length:          12
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3212
+    Length:          18
+    ReplacementText: 'DPCT_CHECK_ERROR(plan = dpct::fft::fft_engine::create())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3248
+    Length:          51
+    ReplacementText: 'DPCT_CHECK_ERROR(plan = dpct::fft::fft_engine::create(&q_ct1, fft_size, dpct::fft::fft_type::complex_float_to_complex_float, batch_size))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3303
+    Length:          0
+    ReplacementText: "    /*\n    DPCT1025:0: The SYCL queue is created ignoring the flag and priority options.\n    */\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3320
+    Length:          57
+    ReplacementText: 'DPCT_CHECK_ERROR(stream = dev_ct1.create_queue())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3395
+    Length:          28
+    ReplacementText: 'DPCT_CHECK_ERROR(plan->set_queue(stream))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3477
+    Length:          79
+    ReplacementText: 'DPCT_CHECK_ERROR(d_data = (sycl::float2 *)sycl::malloc_device(sizeof(data_type) * data.size(), q_ct1))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3563
+    Length:          0
+    ReplacementText: "/*\n    DPCT1124:2: cudaMemcpyAsync is migrated to asynchronous memcpy API. While the origin API might be synchronous, it depends on the type of operand memory, so you may need to call wait() on event return by memcpy API to ensure synchronization behavior.\n    */\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3576
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3644
+    Length:          57
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3701
+    Length:          8
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3710
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3842
+    Length:          49
+    ReplacementText: 'DPCT_CHECK_ERROR((plan->compute<sycl::float2, sycl::float2>(d_data, d_data, dpct::fft::fft_direction::forward)))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3925
+    Length:          74
+    ReplacementText: "stream->submit(\n      [&](sycl::handler &cgh) {\n        auto fft_size_ct2 = 1.f/fft_size;\n\n        cgh.parallel_for(\n          sycl::nd_range<3>(sycl::range<3>(1, 1, 128), sycl::range<3>(1, 1, 128)), \n          [=](sycl::nd_item<3> item_ct1) {\n            scaling_kernel(d_data, element_count, fft_size_ct2, item_ct1);\n          });\n      });"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: true
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          3999
+    Length:          1
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4111
+    Length:          49
+    ReplacementText: 'DPCT_CHECK_ERROR((plan->compute<sycl::float2, sycl::float2>(d_data, d_data, dpct::fft::fft_direction::backward)))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4168
+    Length:          0
+    ReplacementText: "/*\n    DPCT1124:3: cudaMemcpyAsync is migrated to asynchronous memcpy API. While the origin API might be synchronous, it depends on the type of operand memory, so you may need to call wait() on event return by memcpy API to ensure synchronization behavior.\n    */\n    "
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4181
+    Length:          15
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->memcpy'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4249
+    Length:          57
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4306
+    Length:          8
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4315
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4336
+    Length:          29
+    ReplacementText: 'DPCT_CHECK_ERROR(stream->wait())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4615
+    Length:          16
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::dpct_free(d_data, q_ct1)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4631
+    Length:          0
+    ReplacementText: ')'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4649
+    Length:          18
+    ReplacementText: 'DPCT_CHECK_ERROR(dpct::fft::fft_engine::destroy(plan))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4688
+    Length:          25
+    ReplacementText: 'DPCT_CHECK_ERROR(dev_ct1.destroy_queue(stream))'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Offset:          4734
+    Length:          17
+    ReplacementText: 'DPCT_CHECK_ERROR(dev_ct1.reset())'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_cuda_cufft_example.cpp'
+    Digest:          8e95443985ce0d6d1e3d18075d39ae51
+DpctVersion:     2025.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

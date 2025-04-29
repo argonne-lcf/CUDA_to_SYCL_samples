@@ -1,0 +1,229 @@
+---
+MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/1d_c2c_dpct_example/cufft_utils.h'
+Replacements:
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          2615
+    Length:          0
+    ReplacementText: "/*\nDPCT1009:1: SYCL uses exceptions to report errors and does not use the error codes. The call was replaced by a placeholder string. You need to rewrite this code.\n*/\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          2893
+    Length:          11
+    ReplacementText: 'dpct::err0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          2989
+    Length:          1119
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          4108
+    Length:          1
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          4562
+    Length:          11
+    ReplacementText: int
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          4673
+    Length:          13
+    ReplacementText: '0'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5780
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5812
+    Length:          12
+    ReplacementText: 'sycl::float2'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5862
+    Length:          0
+    ReplacementText: ",\n                    const sycl::nd_item<3> &item_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5887
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5901
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5914
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5950
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          5963
+    Length:          9
+    ReplacementText: 'item_ct1.get_group_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          6038
+    Length:          9
+    ReplacementText: 'data[i].x()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Offset:          6067
+    Length:          9
+    ReplacementText: 'data[i].y()'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c/cufft_utils.h'
+    Digest:          1a68caaefc62e5a5b35188292c5d7d83
+DpctVersion:     2025.0.0
+MainHelperFileName: ''
+USMLevel:        ''
+FeatureMap:      {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/abagusetty/CUDA_to_SYCL_samples/cuFFT/1d_c2c'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  BuildScript:
+    Value:           '0'
+    Specified:       false
+  CodePinEnabled:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  EnablepProfiling:
+    Value:           'false'
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  HelperFuncPreferenceFlag:
+    Value:           '0'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UseSYCLCompat:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...
